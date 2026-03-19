@@ -1,7 +1,7 @@
 The WordStorage Class makes it easy to handle arrays with words stored in the flash memory of an ESP32 or an AVR controller such as an Arduino UNO or NANO.
 
 The words have to be listed in a separate file with the following structure
-
+```cpp
 #pragma once
 #include <Arduino.h>
 
@@ -29,7 +29,7 @@ const char* const cat_table[] PROGMEM = {p0, p1, p2};
 
 // Compile-time calculation of the number of categories
 constexpr int NumberOfCategories = sizeof(cat_table) / sizeof(cat_table[0]);
-
+```
 
 Key Rules for the Structure:
 * **Index 0 is the Name:** The WordStorage library is designed to treat the very first element of each string as the header/category name.
