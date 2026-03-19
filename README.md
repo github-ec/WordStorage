@@ -37,3 +37,5 @@ Key Rules for the Structure:
 * **Flash Memory:** Always use const char[] PROGMEM for the strings and const char* const[] PROGMEM for the table to prevent the RAM from filling up.
 
 The structure of the list and the functions of the WordStorage Class support AVR as well as ESP32 architecture.
+
+There is a Python script that automatically creates an appropriate header file from a CSV file. See under "Python"
