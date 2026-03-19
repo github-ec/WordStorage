@@ -1,4 +1,4 @@
-#include "WordLists.h"
+#include "EnglishList.h"
 #include <WordStorage.h>
 
 WordStorage wordStore;
