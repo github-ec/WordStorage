@@ -1,5 +1,9 @@
 #pragma once
 #include <Arduino.h>
+/*
+  Version 2.0
+  Date 2026/03/20
+*/
 
 /**
  * @file WordStorage.h
