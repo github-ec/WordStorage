@@ -70,3 +70,34 @@ void loop() {
     }
   }
 }
+```
+## Structure of the Word List (EnglishList.h, GermanList.h)
+
+To ensure the `WordStorage` class functions correctly, the data file must follow a specific memory-efficient pattern using the `PROGMEM` keyword. 
+
+### Data Formatting Rules
+1. **Delimiter:** Use a forward slash (`/`) to separate words.
+2. **Category Name:** The very first word in each string (Index 0) is treated as the **Category Name**.
+3. **Array of Pointers:** All strings must be collected into a master table (array) for the library to access them.
+
+### Example Implementation
+
+```cpp
+#pragma once
+#include <Arduino.h>
+
+// 1. Define individual strings in Flash memory
+// Format: "CategoryName/Word1/Word2/Word3"
+const char cat_0[] PROGMEM = "FRUITS/Apple/Banana/Cherry/Date/Elderberry";
+const char cat_1[] PROGMEM = "ANIMALS/Dog/Cat/Elephant/Lion/Tiger";
+const char cat_2[] PROGMEM = "COLORS/Red/Green/Blue/Yellow/Magenta";
+
+// 2. Create the master table (array of pointers)
+const char* const cat_table[] PROGMEM = {
+  cat_0,
+  cat_1,
+  cat_2
+};
+
+// 3. Define the total count for the begin() function
+const int NumberOfCategories = 3;
