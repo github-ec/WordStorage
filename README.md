@@ -1,6 +1,6 @@
 The WordStorage Class makes it easy to handle arrays with words stored in the flash memory of an ESP32 or an AVR controller such as an Arduino UNO or NANO.
 
-The words have to be listed in a separate file with the following structure
+The words can be listed in a separate file or included in the main sketch with the following structure
 ```cpp
 #pragma once
 #include <Arduino.h>
