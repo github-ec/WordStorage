@@ -4,4 +4,4 @@ The first line in the  CSV file contains the category names.
 The columns contain the words that belong to the category given in the first line.
 The categories can have different numbers of words.
 
-The sketch does not check for wmpty columns, they should be avoided.
+The sketch does not check for empty columns, they should be avoided.
